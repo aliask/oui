@@ -38,7 +38,7 @@ sudo cp oui /usr/local/bin
 Before looking up any MAC addresses, you need to acquire the OUI database:
 
 ```sh
-./oui update
+oui update
 ```
 
 This command downloads the latest OUI data from IEEE and stores it locally in your user configuration directory.
@@ -48,21 +48,21 @@ This command downloads the latest OUI data from IEEE and stores it locally in yo
 To lookup the manufacturer for a given MAC address, use the `lookup` command followed by the MAC address:
 
 ```sh
-./oui [lookup] ${MAC}
+oui [lookup] ${MAC}
 ```
 
 If `lookup` is omitted, the argument is assumed to be a MAC address.
 
-Examples:
+#### Examples
 
-```sh
-oui lookup 00:1A:2B:3C:4D:5E
+```console
+aliask:~$ oui lookup 00:1A:2B:3C:4D:5E
 Manufacturer for OUI 00:1A:2B:3C:4D:5E is: Ayecom Technology Co., Ltd.
 
-oiu 00-24-E8
+aliask:~$ oiu 00-24-E8
 Manufacturer for OUI 00-24-E8 is: Dell Inc.
 
-oiu lookup 00307E
+aliask:~$ oiu lookup 00307E
 Manufacturer for OUI 00307E is: Redflex Communication Systems
 ```
 
